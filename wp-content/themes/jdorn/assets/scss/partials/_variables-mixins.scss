@@ -1,0 +1,32 @@
+/* variables */
+$dark-grey: #333232;
+$font-color: #333;
+$dark-blue: #383737;
+$med-blue: #2c4d6c;
+$light-blue: #2e71aa;
+$body-bg: #ffffff;
+$salmon: #e66d4c;
+
+$small-screen: 320px;
+$medium-screen: 768px;
+$large-screen: 960px;
+
+/* mixins */
+
+@mixin breakpoint($point) {
+	@if $point == large{
+		@media (min-width: $large-screen) { @content; }
+	}
+	@else if $point == medium {
+		@media (min-width: $medium-screen) { @content; }
+	}
+	@else if $point == small {
+		@media (min-width: $small-screen)  { @content; }
+	}
+	@else if $point == xsmall {
+		@media (max-width: $small-screen - 1)  { @content; }
+	}
+	@else if $point{
+		@media  (min-width: $point)  { @content; }
+	}
+}

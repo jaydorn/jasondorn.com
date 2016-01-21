@@ -1,0 +1,38 @@
+button, 
+.button {
+	background: $salmon;
+	font-family: "ff-ernestine-web-pro",sans-serif;
+	padding: 0.1rem 1.25rem;
+	font-size: 0.7rem;
+	border: 1px solid $salmon;
+	border-radius: 3px;
+	color: white;
+	margin: 0 0;
+	text-transform: uppercase !important;
+	display: inline-block;
+	font-weight: 700;
+	form & {
+		padding: 0.75rem 3rem 0.6rem;
+	}
+	@include transitions-all;
+	&:hover {
+		color: $salmon;
+		background: transparent;
+		border-color: $salmon;
+	}
+	.banner & {
+		background: transparent;
+		border: 1px solid white;
+		margin-top: 0.75rem;
+
+		text-decoration: none !important;
+		&:hover {
+			color: white !important;
+			border-color: $salmon;
+			background: $salmon;
+			//padding: 0.25em 3em;
+			
+		}
+
+	}
+}

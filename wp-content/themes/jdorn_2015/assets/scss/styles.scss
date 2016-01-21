@@ -1,0 +1,17 @@
+
+
+@import "compass/reset";
+@import "compass";
+@import "partials/_variables-mixins";
+@import "partials/_foundation";
+//@import "partials/_off-canvas";
+@import 'partials/foundation/components/offcanvas';
+@import "partials/_magnific";
+@import "partials/_custom";
+@import "partials/_buttons";
+/*
+@import "partials/_slick";
+@import "partials/_slick-theme";
+*/
+@import "partials/_animsition.min.scss";
+@import "partials/_forms.scss";

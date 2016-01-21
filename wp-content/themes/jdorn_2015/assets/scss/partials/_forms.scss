@@ -1,0 +1,35 @@
+input[type="text"] {
+	font-family: $font-family-main;
+	font-size: 1rem;
+	width: 100%;
+	margin: 1rem auto;
+	height: 3rem;
+	padding: 1rem 1rem 0.75rem;
+	border: 1px solid lighten($dark-grey, 60%);
+	@include transitions-all;
+	@include border-radius(4px);
+	&:focus {
+		outline: none;
+		border-color: $salmon;
+	}
+}
+
+textarea {
+	font-family: $font-family-main;
+	font-size: 1rem;
+	width: 100%;
+	padding: 1rem;
+	margin: 1rem auto;
+	border: 1px solid lighten($dark-grey, 60%);
+	@include border-radius(4px);
+	&:focus {
+		outline: none;
+		border-color: $salmon;
+	}	
+	
+}
+
+form {
+	padding: 0 1rem 2rem;
+
+}

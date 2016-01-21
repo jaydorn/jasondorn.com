@@ -1,0 +1,43 @@
+/* Google Web Font Include */
+@import url(https://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300);
+
+/* variables */
+$dark-grey: #333232;
+$font-color: #333;
+$dark-blue: #383737;
+$med-blue: #2c4d6c;
+$light-blue: #2e71aa;
+$body-bg: #ffffff;
+$salmon: #e66d4c;
+
+$small-screen: 320px;
+$medium-screen: 768px;
+$large-screen: 960px;
+
+$font-family-main: 'Roboto Slab', serif;
+
+/* mixins */
+
+@mixin breakpoint($point) {
+	@if $point == large{
+		@media (min-width: $large-screen) { @content; }
+	}
+	@else if $point == medium {
+		@media (min-width: $medium-screen) { @content; }
+	}
+	@else if $point == small {
+		@media (min-width: $small-screen)  { @content; }
+	}
+	@else if $point == xsmall {
+		@media (max-width: $small-screen - 1)  { @content; }
+	}
+	@else if $point{
+		@media  (min-width: $point)  { @content; }
+	}
+}
+
+@mixin transitions-all {
+		@include transition-property(all);
+		@include transition-duration(250ms);
+		@include transition-timing-function(ease-in linear);
+}

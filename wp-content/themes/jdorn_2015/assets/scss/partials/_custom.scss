@@ -301,6 +301,9 @@ a.icon-link {
 			font-size: 1.25em;
 			//border-top: 1px solid lighten($dark-grey, 10%);
 			text-align: center;
+			&:hover {
+				color: $salmon;
+			}
 		}
 		
 		.current_page_item a {	color: $salmon;	}

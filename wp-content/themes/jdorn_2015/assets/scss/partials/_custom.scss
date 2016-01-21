@@ -299,7 +299,6 @@ a.icon-link {
 			color: white;
 			padding: 1em;
 			font-size: 1.25em;
-			//border-top: 1px solid lighten($dark-grey, 10%);
 			text-align: center;
 			&:hover {
 				color: $salmon;
@@ -308,35 +307,7 @@ a.icon-link {
 		
 		.current_page_item a {	color: $salmon;	}
 		body.single-design & .menu-item-109 a { color:  $salmon; }
-		
-/*
-		@include breakpoint(medium) {
-			margin-top: 1rem !important;
-			height: 4em;
-			width: auto;
-			float: right;
-			
-				position: relative;
-				background: transparent;
-			
-			ul {	margin-top: 0;	}
-			ul li {display: inline-block;}
-			a {
-				background: transparent;
-				display: inline-block;
-				line-height: 4.4em;
-				padding: 0 2em;
-				margin-top: -0.2em;
-				font-size: 0.85em;
-				border-top: none;
-				//color: darken(white, 22%);
-				&:hover {
-					//text-decoration: underline;
-					color: darken(white, 35%);
-				}
-			}
-		}
-*/
+
 		
 	}	
 	
@@ -809,7 +780,8 @@ body.landscapes a.landscapes {
 
 #design-samples {
 	img {
-		margin-bottom: 2em;
+		margin: 0 auto 3rem;
+		display: block;
 	}
 }
 

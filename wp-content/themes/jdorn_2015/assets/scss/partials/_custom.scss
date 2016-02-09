@@ -484,6 +484,7 @@ footer {
 		@include transitions-all;
 		
 		figure {
+			position: relative;
 	
 			&:before {
 				content: "";

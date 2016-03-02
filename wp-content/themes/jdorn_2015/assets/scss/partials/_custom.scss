@@ -453,7 +453,7 @@ footer {
 	@include breakpoint(medium) {
 		body.home & {
 			padding-top: calc(22% - 2em);
-			padding-bottom:	7em;
+			padding-bottom:	calc(22% - 2em);
 		}
 		background-attachment: fixed;
 		text-align: left;

@@ -15,7 +15,7 @@ get_header(); ?>
 
 <div class="banner">
 	<div  class="row">
-		<div class="small-12 medium-6 medium-offset-1  columns animsition ">
+		<div class="small-12 medium-6 large-7 medium-offset-1  columns animsition ">
 					<h1>Hi, I'm Jason.</h1>
 					<p>I'm an interactive designer in Calgary Alberta. I've been handcrafting digital experiences for over 10 years, and taking lots of pictures along the way.</p>
 					<p><a href="/about" class="button">Learn more</a></p>

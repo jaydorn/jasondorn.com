@@ -205,21 +205,11 @@ a.icon-link {
 	nav#main {
 		width: 100%;
 		display: inline-block;
-/*
-		@include breakpoint(medium) {
-			width: auto;
-			float: right;
-		}
-*/
+
 
 		
 	}
-	
-	@include breakpoint(medium) {
-			
-		
-		
-	}
+
 	
 	
 	.hamburger {
@@ -241,46 +231,33 @@ a.icon-link {
 			transition: all 300ms ease-out; 
 		}
 		
-		.on {
+		
+		.move-bottom {
 			.icon-hamburger, 
 			.icon-hamburger:before, 
 			.icon-hamburger:after {
-				background: darken(white, 25%);
+				background: $salmon;
 			}
 		}
 		
 		.icon-hamburger:before {
 			margin-top: -0.5em;
 		}
-/*
-		@include breakpoint(medium) {
-			display: none;
-		}
-*/
+
 		
-	}	
+	}
+		
 	
 	
 	div.menu,
 	div.menu-menu-1-container {
-		width: 100%;
-		margin-top: 1rem;
-		//margin-top: 0.5em;
-/*
-		overflow: hidden;
-		height: 0;
-*/
-		
-		
-		//@include transitions-all;
-		
-		
-		
+			width: 100%;
+			margin-top: 1rem;
 			height: auto;
 			position: absolute;
 			top: 0;
 			z-index: 9;
-			background: darken($dark-grey, 4%);
+			background: $off-canvas-bg;
 	
 		
 		ul {
@@ -295,7 +272,7 @@ a.icon-link {
 		
 		a {
 			display: block;
-			background: darken($dark-grey, 4%);
+			background: $off-canvas-bg;
 			color: white;
 			padding: 1em;
 			font-size: 1.25em;

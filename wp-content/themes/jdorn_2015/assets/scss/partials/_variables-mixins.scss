@@ -5,10 +5,14 @@
 $dark-grey: #333232;
 $font-color: #333;
 $dark-blue: #383737;
-$med-blue: #2c4d6c;
+$med-blue: #0A9BDE;
 $light-blue: #2e71aa;
 $body-bg: #ffffff;
-$salmon: #e66d4c;
+//$salmon: #e66d4c;
+$salmon: #FF71E0; /* Salmon is so 2015, lets to fucking PINK */
+
+
+
 
 $small-screen: 320px;
 $medium-screen: 768px;
@@ -34,7 +38,7 @@ $off-canvas-overlay-cursor: pointer !default;
 $off-canvas-overlay-box-shadow: none;
 $off-canvas-overlay-background: none;
 $off-canvas-overlay-background-hover: none;
-$off-canvas-bg: darken($dark-grey, 12%);
+$off-canvas-bg: $med-blue;
 $off-canvas-bg-hover: $dark-grey;
 $off-canvas-bg-active: $dark-grey;
 

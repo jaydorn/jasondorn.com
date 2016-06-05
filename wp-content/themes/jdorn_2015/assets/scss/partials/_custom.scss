@@ -349,14 +349,12 @@ footer {
 
 
 .banner {
-	background: #000000;
-	background-size: cover;
-	background-image: url('../images/banner-home.jpg');
-	background-position: center center;
-	
+	background-image: linear-gradient(-137deg, #0A9BDE 0%, #FF71E0 84%);
+	height: 100%;
 	padding-top: 6em;
 	padding-bottom: 3em;
 	overflow: hidden;
+/*
 	
 	body.page-template-page-work & {
 		background-image: url('../images/banner-work.jpg');
@@ -364,6 +362,7 @@ footer {
 	body.page-id-118 & {
 		background-image: url('../images/banner-services.jpg');
 	}
+*/
 	
 	//height: 560px;
 	color: #ffffff;
@@ -371,7 +370,7 @@ footer {
 	//@include text-shadow(rgba($font-color, 0.1) 1px 1px 4px);
 	h1 {
 		font-size: 2.25em;
-		color: $salmon;
+		color: $white;
 		margin-bottom: 1rem;
 	}
 	p {
@@ -385,7 +384,7 @@ footer {
 		color: #ffffff;
 		text-decoration: underline;
 		&:hover {
-			color: darken(white, 45%);
+			color: $salmon;
 			
 			
 		}
@@ -441,6 +440,11 @@ footer {
 			font-size: 1.125em;
 			margin-bottom: 0.25em;
 		}
+/*
+		&:hover {
+			background-image: linear-gradient(-137deg, #0A9BDE 40%, #FF71E0 84%);
+		}
+*/
 	}
 }
 
@@ -453,7 +457,7 @@ footer {
 		position: relative;
 		
 		
-		h2 {	font-size: 1.25rem;	}
+		h2 {	font-size: 1.25rem;	color: $med-blue; }
 		
 		&.work figure:after { background: url('../images/icon-work.svg') center center no-repeat; }
 		&.services figure:after { background: url('../images/icon-services.svg') center center no-repeat; }
@@ -469,7 +473,8 @@ footer {
 				width: 90px;
 				height: 90px;
 				border-radius: 90px;
-				background: $dark-grey;
+				//background-image: linear-gradient(-137deg, #0A9BDE 0%, #FF71E0 100%);
+				background-image: linear-gradient(-137deg, #FF71E0 0%, #0A9BDE 100%);
 				margin: 0 auto;	
 				@include transitions-all;
 			}
@@ -655,7 +660,7 @@ footer {
 				filter: grayscale(100%);
 			}
 			a:hover figure {
-				background: darken($salmon, 40%);
+				background: $med-blue;
 			}
 			
 			a:hover figcaption {
@@ -663,7 +668,7 @@ footer {
 				opacity: 1;
 				
 				h1 { 
-					color: $salmon; 
+					color: $white; 
 					opacity: 1;
 				}
 				p { 

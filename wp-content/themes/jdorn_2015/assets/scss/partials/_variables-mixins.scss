@@ -62,6 +62,32 @@ $off-canvas-bg-active: $dark-grey;
 	}
 }
 
+@mixin gradients-are-rad {
+	background: linear-gradient(-137deg, #0A9BDE 0%, #FF71E0 84%);
+	background-size: 200% 200%;
+	
+	-webkit-animation: AnimationName 10s ease infinite;
+	-moz-animation: AnimationName 10s ease infinite;
+	animation: AnimationName 10s ease infinite;
+	
+	@-webkit-keyframes AnimationName {
+	    0%{background-position:0% 97%}
+	    50%{background-position:100% 4%}
+	    100%{background-position:0% 97%}
+	}
+	@-moz-keyframes AnimationName {
+	    0%{background-position:0% 97%}
+	    50%{background-position:100% 4%}
+	    100%{background-position:0% 97%}
+	}
+	@keyframes AnimationName { 
+	    0%{background-position:0% 97%}
+	    50%{background-position:100% 4%}
+	    100%{background-position:0% 97%}
+	}	
+	
+}
+
 @mixin transitions-all {
 		@include transition-property(all);
 		@include transition-duration(250ms);

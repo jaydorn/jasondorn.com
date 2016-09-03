@@ -10,32 +10,42 @@ get_header(); ?>
 <div class="banner">
 	<div>
 		<h1 class="text-center">
-			<?php the_field('project_name'); ?> 
-			<?php if( get_field('project_url') ): ?>  
-				<a href="<?php the_field('project_url'); ?>" class="icon-link" target="_blank"></a>
-			<?php endif; ?>			
-		</h1>
-		<p class="text-center"><strong>Role:</strong> <?php the_field('role'); ?></p>
-		<?php if( get_field('agency') ): ?>
-				<p class="text-center"><strong>Agency:</strong>
-				<?php if( get_field('agency_url') ): ?>
-						<a href="<?php the_field('agency_url'); ?>" target="_blank"><?php the_field('agency'); ?></a>
-					<?php else: ?>
-						<?php the_field('agency'); ?>
-				<?php endif; ?>
-				
-				
-				</p>
-			<?php endif; ?>		
+			<?php the_field('project_name'); ?> 		
+		</h1>		
 	</div>
 </div>
+
+	<div class="row">
+		<div class="medium-12 columns">
+			<a href="/work" class="button back">Back to work</a>
+		</div>
+	</div>
 	<section class="row" id="content">
+
+		
+		<div class="medium-3 columns" id="design-sidebar">
+			
+
+		<p class=""><strong>Role</strong><br /> <?php the_field('role'); ?></p>
+		<?php while ( have_posts() ) : the_post(); ?>
+			<?php the_content(); ?>
+		<?php endwhile; // end of the loop. ?>					
+					
+		<?php if( get_field('project_url') ): ?> 
+		<hr />	
+		<h1><a href="<?php the_field('project_url'); ?>" target="_blank">Visit Live Site</a></h1>
+				<br />
+		<?php endif; ?>		
+			
+		</div>
+		
+		
 		<?php while ( have_posts() ) : the_post(); ?>
 		
 			
 			
 			
-			<div class="medium-9 medium-centered columns" id="design-samples">
+			<div class="medium-9 columns" id="design-samples">
 			
 						
 			<?php if( have_rows('screenshots') ): ?>

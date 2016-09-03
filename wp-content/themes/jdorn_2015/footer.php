@@ -9,8 +9,14 @@
 ?>
 
 	<footer>
-		<div class="medium-3 medium-centered columns">
-			<h3>Find me on:</h3>
+		<div class="medium-6 columns">
+			<h5>&copy; copyright Jason Dorn <?php echo date("Y"); ?></h5>
+		</div>		
+		
+		<div class="medium-3  right columns">
+			
+			
+			
 			<ul class="small-block-grid-5 " id="social-links">
 				<li><a href="https://twitter.com/jaydorn" class="icon-twitter" target="_blank"></a></li>
 				<li><a href="http://instagram.com/jaydorn" class="icon-instagram" target="_blank"></a></li>
@@ -20,9 +26,7 @@
 			</ul>			
 		</div>
 		
-		<div class="medium-12 columns">
-			<h5>&copy; copyright Jason Dorn <?php echo date("Y"); ?></h5>
-		</div>
+
 		<div class="clear"></div>
 	
 	</footer>
@@ -71,6 +75,10 @@
 			overlayClass : 'animsition-overlay-slide',
 			overlayParentElement : 'body'
 		});	  
+		
+		
+		
+		
 	  
 		$(function() {
 		  $('a[href*=#]:not([href=#])').click(function() {
@@ -85,8 +93,17 @@
 		      }
 		    }
 		  });
-		});	  
+		});	 
+
+
+
+
+
 	});
+
+
+
+
 
 	</script>
 	<script type="text/javascript">

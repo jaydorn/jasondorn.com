@@ -179,6 +179,11 @@ a.icon-link {
 		height: 2rem;
 		background: url('../images/jd_logo.svg') center center no-repeat;
 		margin-top: 0.75rem;
+		@include transition-property(all);
+		@include transition-duration(250ms);		
+		&:hover {
+			@include transform(rotate(-360deg));
+		}
 	}
 	
 	.columns {
@@ -210,7 +215,11 @@ a.icon-link {
 		
 	}
 
-	
+	#menu-toggle {
+		display: block;
+		height: 1rem;
+		width: 1.75rem;
+	}
 	
 	.hamburger {
 		position: absolute;
@@ -224,7 +233,7 @@ a.icon-link {
 			position: absolute;
 			right: 0;
 			display: block;
-			height: 0.25em;
+			height: 0.125em;
 			margin-top: 0.5em;
 			width: 1.75em;
 			background: white;
@@ -232,11 +241,23 @@ a.icon-link {
 		}
 		
 		
-		.move-bottom {
-			.icon-hamburger, 
-			.icon-hamburger:before, 
+		.move-bottom & {
+			.icon-hamburger {
+				background: none;
+				position: relative;
+			}
+			.icon-hamburger:before	{
+				@include transform(rotate(-135deg));
+				position: absolute;
+				top: 0.5rem;
+				left: 0;
+			}
+			
 			.icon-hamburger:after {
-				background: $salmon;
+				@include transform(rotate(135deg));
+				position: absolute;
+				top: -0.5rem;
+				left: 0;
 			}
 		}
 		
@@ -278,12 +299,13 @@ a.icon-link {
 			font-size: 1.25em;
 			text-align: center;
 			&:hover {
-				color: $salmon;
+				color: darken($med-blue, 20%);
+				//border-bottom: 2px solid $salmon;
 			}
 		}
 		
-		.current_page_item a {	color: $salmon;	}
-		body.single-design & .menu-item-109 a { color:  $salmon; }
+		.current_page_item a {	color: darken($med-blue, 20%);	}
+		body.single-design & .menu-item-109 a { color: darken($med-blue, 20%); }
 
 		
 	}	
@@ -310,14 +332,25 @@ a.icon-link {
 
 footer {
 	text-align: center;
-	padding: 2em 0;
+	padding: 1em 0 0;
 	height: auto;
-	background: $dark-grey;
+	@include gradients-are-rad;
 	color: white;
 	a { color: white; }
 	p {
 		font-size: 0.9em;
-		//font-weight: normal;
+		font-weight: 400;
+	}
+	h5, h3 {
+		font-weight: 400;
+		font-size: 0.85rem;
+		margin-top: 0.35rem;
+		
+	}
+	@include breakpoint(medium) {
+		h5 {
+			text-align: left;
+		}
 	}
 }
 
@@ -349,29 +382,54 @@ footer {
 
 
 .banner {
-	background: #000000;
-	background-size: cover;
-	background-image: url('../images/banner-home.jpg');
-	background-position: center center;
-	
+	//background-image: linear-gradient(-137deg, #0A9BDE 0%, #FF71E0 84%);
+	height: 100%;
 	padding-top: 6em;
 	padding-bottom: 3em;
 	overflow: hidden;
-	
-	body.page-template-page-work & {
-		background-image: url('../images/banner-work.jpg');
-	}
-	body.page-id-118 & {
-		background-image: url('../images/banner-services.jpg');
-	}
-	
+	position: relative;
 	//height: 560px;
 	color: #ffffff;
 	text-align: center;
+	
+	@include gradients-are-rad;
+
+	
+	
 	//@include text-shadow(rgba($font-color, 0.1) 1px 1px 4px);
+
+	
+/*
+	&:before {
+		opacity: 0;
+		content: "";
+		background-image: linear-gradient(137deg, #0a9bde 0%,#ff71e0 84%);
+		display: block;
+		width: 100%;
+		height: 105vh;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		@include transition-property(all);
+		@include transition-duration(4000ms);
+		@include transition-timing-function(ease-out);
+	
+	}
+	
+	&:hover {
+		&:before {
+			opacity: 1;
+		}
+	}
+*/
+
+
+
+
+	
 	h1 {
 		font-size: 2.25em;
-		color: $salmon;
+		color: $white;
 		margin-bottom: 1rem;
 	}
 	p {
@@ -385,7 +443,7 @@ footer {
 		color: #ffffff;
 		text-decoration: underline;
 		&:hover {
-			color: darken(white, 45%);
+			color: $salmon;
 			
 			
 		}
@@ -432,7 +490,7 @@ footer {
 			padding-top: calc(22% - 2em);
 			padding-bottom:	calc(22% - 2em);
 		}
-		background-attachment: fixed;
+		//background-attachment: fixed;
 		text-align: left;
 		 
 		h1 { font-size: 2.25em; }
@@ -441,19 +499,29 @@ footer {
 			font-size: 1.125em;
 			margin-bottom: 0.25em;
 		}
+/*
+		&:hover {
+			background-image: linear-gradient(-137deg, #0A9BDE 40%, #FF71E0 84%);
+		}
+*/
 	}
 }
 
 
 #leaders {
-	padding: 6rem 0;
+	padding: 4rem 0;
+	//background: $dark-grey;
 	.home-lead {
 
 		text-align: center;
 		position: relative;
 		
 		
-		h2 {	font-size: 1.25rem;	}
+		h2 {	
+			font-size: 1rem;	
+			color: $med-blue; 
+			font-weight: 400;
+		}
 		
 		&.work figure:after { background: url('../images/icon-work.svg') center center no-repeat; }
 		&.services figure:after { background: url('../images/icon-services.svg') center center no-repeat; }
@@ -469,9 +537,14 @@ footer {
 				width: 90px;
 				height: 90px;
 				border-radius: 90px;
-				background: $dark-grey;
+				background: $med-blue;
+				//background-image: linear-gradient(-137deg, #0A9BDE 0%, #FF71E0 100%);
+				//background-image: linear-gradient(180deg, #FF71E0 0%, #0A9BDE 130%);
+				//background: darken($med-blue, 8%);
+				//background-image: linear-gradient(180deg, #FF71E0 0%, $med-blue 110%);
 				margin: 0 auto;	
 				@include transitions-all;
+				//@include gradients-are-rad;
 			}
 	
 			&:after {
@@ -499,7 +572,9 @@ footer {
 				p {
 					display: none;
 					opacity: 0;
-					color: $font-color;
+					color: lighten($font-color, 15%);
+					font-weight: 400 !important;;
+					font-size: 0.9rem !important;
 					@include transitions-all;
 				}
 			}			
@@ -655,7 +730,7 @@ footer {
 				filter: grayscale(100%);
 			}
 			a:hover figure {
-				background: darken($salmon, 40%);
+				background: $med-blue;
 			}
 			
 			a:hover figcaption {
@@ -663,7 +738,7 @@ footer {
 				opacity: 1;
 				
 				h1 { 
-					color: $salmon; 
+					color: $white; 
 					opacity: 1;
 				}
 				p { 
@@ -691,6 +766,10 @@ footer {
 		margin-top: 4em;
 		body.page-id-2 & {
 			margin-top: 8em;
+		}
+		
+		body.single-design & {
+			margin-top: 1em;
 		}
 	}
 	
@@ -756,10 +835,17 @@ body.landscapes a.landscapes {
 
 /* Design and Illustration */
 
+
+.button.back {
+	margin: 2em 0;
+}
+
+
 #design-samples {
 	img {
 		margin: 0 auto 3rem;
 		display: block;
+		@include box-shadow(rgba(0,0,0,0.15) 0px 0px 4px 0px);
 	}
 }
 
@@ -786,13 +872,15 @@ body.landscapes a.landscapes {
 		font-size: 1em;
 	}
 	p {
-		font-size: 0.9em;
+		font-size: 0.85em;
 	}
 	hr {
 		margin:1em 0;
 		width: 100%;
+		height: 1px;
+		background: lighten($font-color, 66%);
 		@include breakpoint(medium) {
-			width: 90%;
+			width: 100%;
 		}
 	}
 }
@@ -854,22 +942,24 @@ body.error404 {
 
 #social-links {
 	margin-top: 0.65em;
-	margin-bottom: 2em;
+	margin-bottom: 1em;
 
 	li {
 		
 	}
 	[class^="icon-"]:before, [class*=" icon-"]:before {
 		text-decoration: none;
-		font-size: 2em;
+		font-size: 1.2em;
 		
 	}
 	
 	a {
-		color: lighten($dark-blue, 20%);
+		color: white;
+		opacity: 0.7;
 		&:hover {
 			text-decoration: none;
 			color: $salmon;
+			opacity: 1;
 		}
 	}
 	

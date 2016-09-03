@@ -56,15 +56,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/assets\/css\/styles.css": {
-		"fileType": 16,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/css\/styles.css",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/assets\/images\/banner-home.jpg": {
 		"fileType": 16384,
 		"ignore": 0,
@@ -448,54 +439,6 @@
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/assets\/scss\/partials\/_animsition.min.scss",
 		"outputAbbreviatedPath": "\/assets\/css\/_animsition.min.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/assets\/scss\/partials\/_buttons.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/scss\/partials\/_buttons.scss",
-		"outputAbbreviatedPath": "\/assets\/css\/_buttons.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/assets\/scss\/partials\/_custom.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/scss\/partials\/_custom.scss",
-		"outputAbbreviatedPath": "\/assets\/css\/_custom.css",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0,
-		"outputStyle": 0,
-		"shouldRunAutoprefixer": 0,
-		"shouldRunBless": 0,
-		"useLibsass": 0
-		},
-	"\/assets\/scss\/partials\/_forms.scss": {
-		"createSourceMap": 0,
-		"debugStyle": 0,
-		"decimalPrecision": 10,
-		"fileType": 4,
-		"ignore": 1,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/assets\/scss\/partials\/_forms.scss",
-		"outputAbbreviatedPath": "\/assets\/css\/_forms.css",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0,
 		"outputStyle": 0,
@@ -1370,15 +1313,6 @@
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0
 		},
-	"\/index.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/index.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
 	"\/js\/customizer.js": {
 		"fileType": 64,
 		"ignore": 0,
@@ -2058,15 +1992,6 @@
 		"ignore": 0,
 		"ignoreWasSetByUser": 0,
 		"inputAbbreviatedPath": "\/sidebar.php",
-		"outputAbbreviatedPath": "No Output Path",
-		"outputPathIsOutsideProject": 0,
-		"outputPathIsSetByUser": 0
-		},
-	"\/single-design.php": {
-		"fileType": 8192,
-		"ignore": 0,
-		"ignoreWasSetByUser": 0,
-		"inputAbbreviatedPath": "\/single-design.php",
 		"outputAbbreviatedPath": "No Output Path",
 		"outputPathIsOutsideProject": 0,
 		"outputPathIsSetByUser": 0

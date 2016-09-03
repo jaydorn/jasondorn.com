@@ -23,43 +23,44 @@ get_header(); ?>
 	</div>
 </div>
 
-	<section class="row" id="leaders">
-		
-		<div class="small-4 columns">
-			<a href="/work" class="home-lead work">
-				<figure>
-					<figcaption>
-						<h2>Work</h2>
-						<p>Take a look at some of my past projects.</p>
-						<p><span class="button small">View my work</span></p>
-					</figcaption>
-				</figure>
-			</a>
+	<section id="leaders">
+		<div class="row" >
+			
+			<div class="small-4 columns">
+				<a href="/work" class="home-lead work">
+					<figure>
+						<figcaption>
+							<h2>Work</h2>
+							<p>Take a look at some of my past projects.</p>
+							<p><span class="button small">View my work</span></p>
+						</figcaption>
+					</figure>
+				</a>
+			</div>
+			<div class="small-4 columns">
+				<a href="/services" class="home-lead services">
+					<figure>
+						<figcaption>
+							<h2>Services</h2>
+							<p>UX, responsive web design, web development, illustration, and photography.</p>
+							<p><span class="button small">View services</span></p>
+						</figcaption>
+					</figure>
+				</a>
+			</div>
+			<div class="small-4 columns">
+				<a href="/contact" class="home-lead contact">
+					<figure>
+						<figcaption>
+							<h2>Contact</h2>
+							<p>Ready to make something great together?</p>
+							<p><span class="button small">Get in touch</span></p>
+						</figcaption>
+					</figure>
+				</a>
+			</div>		
 		</div>
-		<div class="small-4 columns">
-			<a href="/services" class="home-lead services">
-				<figure>
-					<figcaption>
-						<h2>Services</h2>
-						<p>UX, responsive web design, web development, illustration, and photography.</p>
-						<p><span class="button small">View services</span></p>
-					</figcaption>
-				</figure>
-			</a>
-		</div>
-		<div class="small-4 columns">
-			<a href="/contact" class="home-lead contact">
-				<figure>
-					<figcaption>
-						<h2>Contact</h2>
-						<p>Ready to make something great together?</p>
-						<p><span class="button small">Get in touch</span></p>
-					</figcaption>
-				</figure>
-			</a>
-		</div>		
 	</section>
-
 
 	<section class="collapse" id="content">
 		

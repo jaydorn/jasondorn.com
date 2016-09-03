@@ -509,14 +509,19 @@ footer {
 
 
 #leaders {
-	padding: 6rem 0;
+	padding: 4rem 0;
+	//background: $dark-grey;
 	.home-lead {
 
 		text-align: center;
 		position: relative;
 		
 		
-		h2 {	font-size: 1.25rem;	color: $med-blue; }
+		h2 {	
+			font-size: 1rem;	
+			color: $med-blue; 
+			font-weight: 400;
+		}
 		
 		&.work figure:after { background: url('../images/icon-work.svg') center center no-repeat; }
 		&.services figure:after { background: url('../images/icon-services.svg') center center no-repeat; }
@@ -532,10 +537,14 @@ footer {
 				width: 90px;
 				height: 90px;
 				border-radius: 90px;
+				background: $med-blue;
 				//background-image: linear-gradient(-137deg, #0A9BDE 0%, #FF71E0 100%);
-				background-image: linear-gradient(-137deg, #FF71E0 0%, #0A9BDE 100%);
+				//background-image: linear-gradient(180deg, #FF71E0 0%, #0A9BDE 130%);
+				//background: darken($med-blue, 8%);
+				//background-image: linear-gradient(180deg, #FF71E0 0%, $med-blue 110%);
 				margin: 0 auto;	
 				@include transitions-all;
+				//@include gradients-are-rad;
 			}
 	
 			&:after {
@@ -563,7 +572,9 @@ footer {
 				p {
 					display: none;
 					opacity: 0;
-					color: $font-color;
+					color: lighten($font-color, 15%);
+					font-weight: 400 !important;;
+					font-size: 0.9rem !important;
 					@include transitions-all;
 				}
 			}			
@@ -756,6 +767,10 @@ footer {
 		body.page-id-2 & {
 			margin-top: 8em;
 		}
+		
+		body.single-design & {
+			margin-top: 1em;
+		}
 	}
 	
 
@@ -820,10 +835,17 @@ body.landscapes a.landscapes {
 
 /* Design and Illustration */
 
+
+.button.back {
+	margin: 2em 0;
+}
+
+
 #design-samples {
 	img {
 		margin: 0 auto 3rem;
 		display: block;
+		@include box-shadow(rgba(0,0,0,0.15) 0px 0px 4px 0px);
 	}
 }
 
@@ -850,13 +872,15 @@ body.landscapes a.landscapes {
 		font-size: 1em;
 	}
 	p {
-		font-size: 0.9em;
+		font-size: 0.85em;
 	}
 	hr {
 		margin:1em 0;
 		width: 100%;
+		height: 1px;
+		background: lighten($font-color, 66%);
 		@include breakpoint(medium) {
-			width: 90%;
+			width: 100%;
 		}
 	}
 }

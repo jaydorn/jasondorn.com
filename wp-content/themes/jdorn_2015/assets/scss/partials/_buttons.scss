@@ -1,5 +1,6 @@
 button, 
-.button {
+.button,
+input[type=submit] {
 	background: $salmon;
 	font-family: "ff-ernestine-web-pro",sans-serif;
 	padding: 0.1rem 1.25rem;

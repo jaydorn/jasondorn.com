@@ -14,12 +14,15 @@
 get_header(); ?>
 
 <div class="banner">
-	<div  class="row">
-		<div class="small-12 medium-6 large-7 medium-offset-1  columns animsition ">
+	<div class="row">
+		<div class="small-12 medium-6 large-6 medium-offset-1  columns animsition ">
 					<h1>Hi, I'm Jason.</h1>
 					<p>I'm an interactive designer in Calgary Alberta. I've been handcrafting digital experiences for over 10 years, and taking lots of pictures along the way.</p>
 					<p><a href="/about" class="button">Learn more</a></p>
 		</div>
+		
+		
+		
 	</div>
 </div>
 
@@ -63,28 +66,26 @@ get_header(); ?>
 	</section>
 
 	<section class="collapse" id="content">
-		
+	
 
-		<ul class="small-block-grid-2 medium-block-grid-3 " id="portfolio-grid">
-				<?php $args = array( 'post_type' => 'design', 'posts_per_page' => 6 );
-						$loop = new WP_Query( $args );
-						while ( $loop->have_posts() ) : $loop->the_post(); ?>		
-				<li>
-					<a href="<?php the_permalink(); ?>">
-						<figure>
-							<?php the_post_thumbnail('large'); ?>
-							<figcaption>
-								<h1><?php the_title(); ?></h1>
-								<p><?php the_field('role'); ?></p>
-							</figcaption>
-						</figure>
-					</a>
-				</li>
-			<?php endwhile; ?>	
-			
-						
+			<ul class="small-block-grid-2 medium-block-grid-3 " id="portfolio-grid">
+					<?php $args = array( 'post_type' => 'design', 'posts_per_page' => 6 );
+							$loop = new WP_Query( $args );
+							while ( $loop->have_posts() ) : $loop->the_post(); ?>		
+					<li>
+						<a href="<?php the_permalink(); ?>">
+							<figure>
+								<?php the_post_thumbnail('large'); ?>
+								<figcaption>
+									<h1><?php the_title(); ?></h1>
+									<p><?php the_field('role'); ?></p>
+								</figcaption>
+							</figure>
+						</a>
+					</li>
+				<?php endwhile; ?>	
+			</ul>
 
-		</ul>
 	</section>
 
 <?php get_footer(); ?>

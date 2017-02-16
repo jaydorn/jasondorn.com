@@ -382,46 +382,27 @@ footer {
 
 
 .banner {
-	//background-image: linear-gradient(-137deg, #0A9BDE 0%, #FF71E0 84%);
 	height: 100%;
 	padding-top: 6em;
 	padding-bottom: 3em;
 	overflow: hidden;
 	position: relative;
-	//height: 560px;
 	color: #ffffff;
 	text-align: center;
 	
 	@include gradients-are-rad;
 
 	
-	
-	//@include text-shadow(rgba($font-color, 0.1) 1px 1px 4px);
-
-	
-/*
-	&:before {
-		opacity: 0;
-		content: "";
-		background-image: linear-gradient(137deg, #0a9bde 0%,#ff71e0 84%);
-		display: block;
+	body.home & {
+		height: 100vh;
 		width: 100%;
-		height: 105vh;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		@include transition-property(all);
-		@include transition-duration(4000ms);
-		@include transition-timing-function(ease-out);
-	
-	}
-	
-	&:hover {
-		&:before {
-			opacity: 1;
+		display: table;
+		
+		.row {
+			display: table-cell;
+			vertical-align: middle;
 		}
 	}
-*/
 
 
 
@@ -435,7 +416,7 @@ footer {
 	p {
 		font-size: 18px;
 		line-height: 1.5em;
-		margin-bottom: 1rem;
+		margin-bottom: 0.25rem;
 	}
 	a {
 		@include transition-property(all);
@@ -499,11 +480,6 @@ footer {
 			font-size: 1.125em;
 			margin-bottom: 0.25em;
 		}
-/*
-		&:hover {
-			background-image: linear-gradient(-137deg, #0A9BDE 40%, #FF71E0 84%);
-		}
-*/
 	}
 }
 
@@ -661,29 +637,22 @@ footer {
 	}
 
 	li {
-	/* 	overflow: hidden; */
 		height: auto;
 		position: relative;
-		//margin-bottom: 1em;
 		background: black;
-		//border: 1px solid $body-bg;
 		img {	
 			width: 100%;
-			//opacity: 0.8;
 			
 		}
 		
 		figcaption {
-			//background: $light-blue;
 			text-align: center;
 			padding: 1em;
 			font-size: 0.75em;
-			//white-space: nowrap;
 			width: 100%;
 			z-index: 10;
 			position: absolute;
 			bottom: 30%;
-			//@include text-shadow(rgba($font-color, 0.1) 1px 1px 4px);	
 			h1 { display: none; }
 			p {
 				display: none;
@@ -698,7 +667,7 @@ footer {
 			padding-bottom: 22%;
 			overflow: hidden;
 			border: none;
-
+			//display: inline-table;
 			
 			figcaption {
 				top: 40%;

@@ -83,7 +83,7 @@ ul {
 	font-style: normal;
 }
 
-[class^="icon-"]:before, [class*=" icon-"]:before, .mfp-arrow-left:before, .mfp-arrow-right:before, .slick-prev:before, .slick-next:before {
+[class^="icon-"]:before, [class*=" icon-"]:before, .mfp-arrow-left:before, .mfp-arrow-right:before, .slick-prev:before, .slick-next:before, #portfolio-grid h1:after {
 	font-family: 'icomoon';
 	speak: none;
 	font-style: normal;
@@ -382,7 +382,6 @@ footer {
 
 
 .banner {
-	//background-image: linear-gradient(-137deg, #0A9BDE 0%, #FF71E0 84%);
 	height: 100%;
 	padding-top: 6em;
 	padding-bottom: 3em;
@@ -394,35 +393,14 @@ footer {
 	
 	@include gradients-are-rad;
 
-	
-	
-	//@include text-shadow(rgba($font-color, 0.1) 1px 1px 4px);
+		body.home & {
+			height: 100vh;
+			
+			#home-intro-copy {
+				top: 22vh;
+			}
 
-	
-/*
-	&:before {
-		opacity: 0;
-		content: "";
-		background-image: linear-gradient(137deg, #0a9bde 0%,#ff71e0 84%);
-		display: block;
-		width: 100%;
-		height: 105vh;
-		position: absolute;
-		top: 0;
-		bottom: 0;
-		@include transition-property(all);
-		@include transition-duration(4000ms);
-		@include transition-timing-function(ease-out);
-	
-	}
-	
-	&:hover {
-		&:before {
-			opacity: 1;
 		}
-	}
-*/
-
 
 
 
@@ -486,11 +464,7 @@ footer {
 	
 	
 	@include breakpoint(medium) {
-		body.home & {
-			padding-top: calc(22% - 2em);
-			padding-bottom:	calc(22% - 2em);
-		}
-		//background-attachment: fixed;
+
 		text-align: left;
 		 
 		h1 { font-size: 2.25em; }
@@ -568,7 +542,9 @@ footer {
 				text-align: center;
 				display: block;
 				width: 100%;
-				@include transitions-all;			
+				@include transitions-all;
+
+							
 				p {
 					display: none;
 					opacity: 0;
@@ -656,13 +632,15 @@ footer {
 
 #portfolio-grid {
 	
+	margin-bottom: 0;
+	
 	a {
 		color: white;
 	}
 
 	li {
 	/* 	overflow: hidden; */
-		height: auto;
+		height: 100vh;
 		position: relative;
 		//margin-bottom: 1em;
 		background: black;
@@ -673,103 +651,88 @@ footer {
 			
 		}
 		
+		figure {
+			
+			height: 100vh;
+			background-size: cover;
+			background-repeat: no-repeat;
+			&:after {
+				@include transitions-all;
+				content: "";
+				width: 100%;
+				height: 100vh;
+				opacity: 0.5;
+				background: black;
+				display: block;
+			}
+			
+			&:hover:after {
+				//opacity: 0.2;
+				background: $salmon;
+			}
+			&:hover h1:after {
+				margin-left: 0.75rem;
+
+			}
+
+		}
+		
+
+		
 		figcaption {
-			//background: $light-blue;
-			text-align: center;
-			padding: 1em;
-			font-size: 0.75em;
-			//white-space: nowrap;
-			width: 100%;
+			top: 50vh;
+			background: none;
+			width: 332px;
 			z-index: 10;
 			position: absolute;
-			bottom: 30%;
-			//@include text-shadow(rgba($font-color, 0.1) 1px 1px 4px);	
-			h1 { display: none; }
-			p {
-				display: none;
+			text-align: left;
+			margin: 0 auto;
+			left: 0;
+			right: 0;
+			white-space: nowrap;
+			text-shadow: 0px 1px 2px rgba(0, 0, 0, 0.5);
+			h1 { 
+				font-size: 1.75rem;
 				
-			}		
+					&:after {
+						@include transitions-all;
+						content: "\e609";
+						background: $salmon;
+						border-radius: 100%;
+						vertical-align: middle;
+						margin-left: 0.4rem;
+						text-shadow: none;
+					}				
+					
+				}
+			
+			
+
+			p { 
+				text-transform: uppercase; 
+				margin:0 0 0.4rem 0;
+			}
+				
 		}
 	}
 
 	@include breakpoint(medium) {
-		li {
-			height: 0;
-			padding-bottom: 22%;
-			overflow: hidden;
-			border: none;
 
-			
-			figcaption {
-				top: 40%;
-				background: none;
-				z-index: 10;
-				//bottom: -35%;
-				font-size: 1em;
-				//opacity: 0;
-				@include transitions-all;
-				h1 { 
-					@include transitions-all; 
-					opacity: 0;
-					display: block;
-				}
-				p { 
-					opacity: 0;
-					display: block; 
-					width: 90%;
-					margin: 0 auto;
-					
-					@include transitions-all;
-				}	
-			}
-			
-			img {	@include transitions-all; }
-			a:hover img {
-				opacity: 0.05;
-				-webkit-filter: grayscale(100%);
-				filter: grayscale(100%);
-			}
-			a:hover figure {
-				background: $med-blue;
-			}
-			
-			a:hover figcaption {
-				top: 30%;
-				opacity: 1;
-				
-				h1 { 
-					color: $white; 
-					opacity: 1;
-				}
-				p { 
-					//display:  block; 
-					opacity: 1;
-				}
-			}
-			
-			
-		}
 		
-			
-/*
-		&.small-block-grid-2 li {
-			padding-bottom: 28% !important;
-		}
-*/
 	}
 }
 
 
 #content {
-	margin-top: 1em;
+	//margin-top: 1em;
 	@include breakpoint (medium) {
-		margin-top: 4em;
+		//margin-top: 4em;
 		body.page-id-2 & {
-			margin-top: 8em;
+			//margin-top: 8em;
 		}
 		
 		body.single-design & {
-			margin-top: 1em;
+			//margin-top: 1em;
 		}
 	}
 	

@@ -24,24 +24,32 @@ get_header(); ?>
 
 
 
-<section class="collapse">
-		<ul class="small-block-grid-2 medium-block-grid-3" id="portfolio-grid">
-				<?php $args = array( 'post_type' => 'design', 'posts_per_page' => 10 );
+	<section class="collapse">
+		
+
+		<ul id="portfolio-grid">
+				<?php $args = array( 'post_type' => 'design', 'posts_per_page' => 6 );
 						$loop = new WP_Query( $args );
-						while ( $loop->have_posts() ) : $loop->the_post(); ?>		
+						while ( $loop->have_posts() ) : $loop->the_post(); ?>	
+						
+						<?php $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id( $post->ID ), "large" );
+ ?>	
 				<li>
-					<a href="<?php the_permalink(); ?> " class="animsition-link">
-						<figure>
-							<?php the_post_thumbnail('large'); ?>
+					<a href="<?php the_permalink(); ?>">
+						<figure style="background-image:url(<?php echo $thumbnail[0]; ?>);">
+							
 							<figcaption>
-								<h1><?php the_title(); ?></h1>
 								<p><?php the_field('role'); ?></p>
+								<h1><?php the_title(); ?></h1>
+								
 							</figcaption>
 						</figure>
 					</a>
-				</li>			
-				<?php endwhile; ?>		
+				</li>
+			<?php endwhile; ?>	
+			
+						
 
 		</ul>
-</section>
+	</section>
 <?php get_footer(); ?>

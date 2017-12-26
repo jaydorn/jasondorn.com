@@ -15,7 +15,7 @@ Template Name: Work Portfolio
 
 get_header(); ?>
 
-<div class="banner">
+<div class="banner short">
 	<div class="section-hero">
 		<h1 class="text-center"><?php echo get_the_title(); ?></h1>
 	</div>
@@ -28,7 +28,7 @@ get_header(); ?>
 		
 
 		<ul id="portfolio-grid">
-				<?php $args = array( 'post_type' => 'design', 'posts_per_page' => 6 );
+				<?php $args = array( 'post_type' => 'design');
 						$loop = new WP_Query( $args );
 						while ( $loop->have_posts() ) : $loop->the_post(); ?>	
 						

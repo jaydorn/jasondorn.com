@@ -17,7 +17,7 @@ get_header(); ?>
 
 	<div class="row">
 		<div class="medium-12 columns">
-			<a href="/work" class="button back">Back to work</a>
+			<a href="/work" class="back icon-arrow-left">Back to work</a>
 		</div>
 	</div>
 	<section class="row" id="content">
@@ -33,7 +33,7 @@ get_header(); ?>
 					
 		<?php if( get_field('project_url') ): ?> 
 		<hr />	
-		<h1><a href="<?php the_field('project_url'); ?>" target="_blank">Visit Live Site</a></h1>
+		<h1><a href="<?php the_field('project_url'); ?>" target="_blank" class="button">Visit Live Site</a></h1>
 				<br />
 		<?php endif; ?>		
 			

@@ -15,6 +15,7 @@ get_header(); ?>
 <div class="banner">
 	<div class="section-hero">
 		<h1 class="text-center"><?php echo get_the_title(); ?></h1>
+		<p class="text-center"><a href="mailto:work@jasondorn.com">work@jasondorn.com</a><br />(403) 467-7047</p>
 	</div>
 </div>
 

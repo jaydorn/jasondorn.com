@@ -132,6 +132,7 @@ a.icon-link {
 }
 .icon-arrow-left:before {
 	content: "\e608";
+	vertical-align: -10%;
 }
 .icon-arrow-right:before {
 	content: "\e609";
@@ -384,12 +385,16 @@ footer {
 .banner {
 	height: 100%;
 	padding-top: 6em;
-	padding-bottom: 3em;
+	padding-bottom: 7em;
 	overflow: hidden;
 	position: relative;
 	//height: 560px;
 	color: #ffffff;
 	text-align: center;
+	
+	&.short {
+		padding-bottom: 3em;
+	}
 	
 	@include gradients-are-rad;
 
@@ -408,7 +413,7 @@ footer {
 	h1 {
 		font-size: 2.25em;
 		color: $white;
-		margin-bottom: 1rem;
+		margin-bottom: 0.3rem;
 	}
 	p {
 		font-size: 18px;
@@ -456,6 +461,7 @@ footer {
 			width: 7rem;
 			height: 7rem;
 			border-radius: 7rem; 
+			margin-bottom: 1em;
 		}
 		
 		
@@ -635,7 +641,7 @@ footer {
 	margin-bottom: 0;
 	
 	a {
-		color: white;
+		color: white;			
 	}
 
 	li {
@@ -657,7 +663,7 @@ footer {
 			background-size: cover;
 			background-repeat: no-repeat;
 			&:after {
-				@include transitions-all;
+				//@include transitions-all;
 				content: "";
 				width: 100%;
 				height: 100vh;
@@ -666,14 +672,8 @@ footer {
 				display: block;
 			}
 			
-			&:hover:after {
-				//opacity: 0.2;
-				background: $salmon;
-			}
-			&:hover h1:after {
-				margin-left: 0.75rem;
 
-			}
+
 
 		}
 		
@@ -696,6 +696,8 @@ footer {
 				
 					&:after {
 						@include transitions-all;
+						
+						display: inline-block;
 						content: "\e609";
 						background: $salmon;
 						border-radius: 100%;
@@ -705,13 +707,16 @@ footer {
 					}				
 					
 				}
-			
-			
-
 			p { 
 				text-transform: uppercase; 
 				margin:0 0 0.4rem 0;
 			}
+			
+			&:hover h1:after {
+				margin-left: 0.75rem;
+				@include transform(rotate(360deg));
+
+			}			
 				
 		}
 	}
@@ -799,8 +804,10 @@ body.landscapes a.landscapes {
 /* Design and Illustration */
 
 
-.button.back {
+a.back {
 	margin: 2em 0;
+	display: block;
+	font-weight: normal;
 }
 
 
@@ -810,6 +817,10 @@ body.landscapes a.landscapes {
 		display: block;
 		@include box-shadow(rgba(0,0,0,0.15) 0px 0px 4px 0px);
 	}
+	@include breakpoint(medium) {
+		margin-top: -8rem;
+	}	
+	
 }
 
 #illustration-samples {
@@ -861,6 +872,11 @@ main#main {
 	padding: 0 2rem;
 	ul {
 		font-weight: normal;
+	}
+	@include breakpoint(medium) { 
+		margin-top: -11rem;
+		background: white;
+		padding: 2rem;
 	}
 	
 }

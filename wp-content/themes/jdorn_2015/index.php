@@ -18,7 +18,7 @@ get_header(); ?>
 		<div class="small-12 medium-8 medium-offset-2  columns animsition " id="home-intro-copy">
 					<h1>Hi, I'm Jason.</h1>
 					<p>I'm User Experience designer in Calgary Alberta. I've been handcrafting digital experiences for over 13 years, and taking lots of pictures along the way.</p>
-					<p><a href="#portfolio-grid" class="button">Learn more</a></p>
+					<p><a href="#portfolio-grid" class="button">View my work</a></p>
 		</div>
 	</div>
 </div>

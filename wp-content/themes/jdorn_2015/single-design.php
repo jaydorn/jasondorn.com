@@ -56,8 +56,9 @@ get_header(); ?>
 					    <?php $image = get_sub_field('image'); 
 						      $size = 'large';
 						      $large = $image['sizes'][ $size ]; ?>					    
-					    
+					   
 					    	<figure>
+					    		 <?php echo get_sub_field('video_test'); ?>
 						    	<a href="<?php the_field('project_url'); ?>" target="_blank">
 						       		<img src="<?php echo $large; ?>" alt="<?php the_sub_field('image_alt'); ?>"/>
 						    	</a>
@@ -78,6 +79,7 @@ get_header(); ?>
 						      $large = $image['sizes'][ $size ]; ?>					    
 					    
 					    	<figure>
+					    		<?php echo get_sub_field('video_test'); ?>
 					       		<img src="<?php echo $large; ?>" alt="<?php the_sub_field('image_alt'); ?>"/>
 					    	</figure>
 					    <?php endwhile; ?>

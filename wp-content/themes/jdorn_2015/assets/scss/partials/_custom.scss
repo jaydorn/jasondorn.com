@@ -400,12 +400,27 @@ footer {
 
 		body.home & {
 			height: 100vh;
+			padding-top: 0;
 			
 			#home-intro-copy {
-				top: 22vh;
+				top: 40vh;
+				h1 { 
+					font-size: 3.5rem;
+					white-space: nowrap;
+					margin-bottom: 2rem;
+					@include breakpoint(medium) { 
+						font-size: 5.25rem;
+					}
+					@include breakpoint(large) {
+						font-size: 7rem;
+						margin-bottom: 3rem;
+					}
+				}
 			}
 
 		}
+
+	
 
 
 
@@ -472,6 +487,15 @@ footer {
 	@include breakpoint(medium) {
 
 		text-align: left;
+		
+	
+		
+		
+	
+		
+		
+		
+			
 		 
 		h1 { font-size: 2.25em; }
 		p {
@@ -479,11 +503,6 @@ footer {
 			font-size: 1.125em;
 			margin-bottom: 0.25em;
 		}
-/*
-		&:hover {
-			background-image: linear-gradient(-137deg, #0A9BDE 40%, #FF71E0 84%);
-		}
-*/
 	}
 }
 
